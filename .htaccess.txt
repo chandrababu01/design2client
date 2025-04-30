@@ -1,0 +1,13 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Redirect root domain to /design2client
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ /design2client/ [L]
+
+# Remove index.html from URL
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+
+# Internally redirect if URL ends with / and index.html exists
+DirectoryIndex index.html
