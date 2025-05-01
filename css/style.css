@@ -1673,3 +1673,7 @@ video {
   border-style: dashed;
   padding: 0.4rem;
 }
+
+.tab-content a {
+  pointer-events: none;
+}
